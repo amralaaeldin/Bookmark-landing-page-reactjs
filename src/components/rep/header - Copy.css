@@ -1,0 +1,227 @@
+header {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px !important;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 20px 60px !important;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px !important;
+  }
+}
+@media (max-width: 380px) {
+  header {
+    padding: 20px 10px !important;
+  }
+}
+
+header .logo {
+  width: 190px;
+  z-index: 1100;
+}
+header .logo:hover {
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 35px;
+  font-size: 0.8em;
+  color: hsl(229, 31%, 21%);
+  letter-spacing: 1px;
+}
+
+header nav ul li:hover {
+  color: var(--main-red);
+  cursor: pointer;
+  transition: 0.15s ease;
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+}
+
+header .btn {
+  text-transform: uppercase;
+  max-height: 45px;
+  align-self: center;
+}
+
+header nav ~ .icon {
+  display: none;
+}
+header nav ~ .logo-open {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header nav.nav-open ~ .logo {
+    display: none;
+  }
+  header nav ~ .logo-open {
+    display: none;
+  }
+
+  header nav.nav-open ~ .logo-open {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+  }
+  header nav.nav-open ~ .logo-open img {
+    width: 190px;
+    height: 36.05px;
+  }
+
+  header nav ~ .logo-open:hover {
+    cursor: pointer;
+  }
+
+  header nav ~ .container.logo-open {
+    width: fit-content;
+    margin: 0;
+  }
+  header nav ~ .container.icon {
+    width: fit-content;
+    margin: 0;
+  }
+
+  header nav ~ .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  header nav.nav-open ~ .icon {
+    display: block;
+    position: absolute;
+    right: 60px;
+    width: fit-content;
+    z-index: 1000;
+  }
+
+  header .icon img.list-icon {
+    width: 17px;
+    height: 15px;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+  }
+
+  header nav ul {
+    display: none;
+  }
+  header nav button {
+    display: none;
+  }
+
+  header nav.nav-open {
+    background-color: hsl(229, 25%, 25%, 97%);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  header nav.nav-open ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25%;
+  }
+
+  @media (max-width: 380px) {
+    header nav.nav-open ul {
+      margin-top: 35%;
+    }
+  }
+
+  header nav.nav-open ul li {
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-size: 1.14em;
+    font-weight: 200;
+    margin: 25px 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  header nav.nav-open ul li:first-of-type:before {
+    content: "";
+    width: 75%;
+    height: 1px;
+    background-color: hsl(229, 8%, 50%);
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    max-width: 500px;
+  }
+  header nav.nav-open ul li::after {
+    content: "";
+    width: 75%;
+    height: 1px;
+    background-color: hsl(229, 8%, 50%);
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    max-width: 500px;
+  }
+
+  header nav.nav-open .btn {
+    display: block;
+    border: 2.3px solid #fff;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 25px;
+    max-width: 500px;
+  }
+  header nav.nav-open .btn:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 2.3px solid #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav.nav-open ~ .icon {
+    right: 30px;
+  }
+}
+@media (max-width: 380px) {
+  header nav.nav-open ~ .icon {
+    right: 10px;
+  }
+}
